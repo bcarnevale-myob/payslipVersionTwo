@@ -2,7 +2,7 @@ package com.company;
 
 public class TaxCalculator {
 
-    public long taxOnIncome(int annualSalary) {
+    public double taxOnIncome(int annualSalary) {
         double tax = 0;
         if(annualSalary > 180000) {
             tax = 54232 + (annualSalary - 180000)*0.45;

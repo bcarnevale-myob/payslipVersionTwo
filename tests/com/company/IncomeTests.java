@@ -25,4 +25,23 @@ public class IncomeTests {
         assertEquals(10042, actualGrossIncome);
 
     }
+
+    @Test
+    public void anAnnualSalaryOf60050_returnsIncomeTaxOf922() {
+        Income income = new Income();
+
+        double actualIncomeTax = income.incomeTax(60050);
+
+        assertEquals(922, actualIncomeTax);
+
+    }
+
+    @Test
+    public void anAnnualSalaryOf60050_returnsNetIncomeOf4082() {
+        Income income = new Income();
+
+        double actualNetIncome = income.netIncome(60050);
+
+        assertEquals(4082, actualNetIncome);
+    }
 }
