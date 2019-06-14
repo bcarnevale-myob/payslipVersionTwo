@@ -16,14 +16,4 @@ public class EmployeeTests {
         assertEquals(expectedFullName, actualFullName);
     }
 
-    @Test
-    public void canCreateAnEmployee_thenReturnTheirAnnualSalary() {
-        Employee employee = new Employee("Bianca", "Carnevale", 60050, 0.09);
-
-        int expectedAnnualSalary = 60050;
-        int actualAnnualSalary = employee.getAnnualSalary();
-
-        assertEquals(expectedAnnualSalary, actualAnnualSalary);
-    }
-
 }
