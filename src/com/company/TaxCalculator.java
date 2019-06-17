@@ -16,5 +16,4 @@ public class TaxCalculator {
         return Math.round(tax);
     }
 
-
 }

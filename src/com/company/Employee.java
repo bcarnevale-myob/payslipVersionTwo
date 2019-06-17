@@ -7,7 +7,6 @@ public class Employee {
     private int annualSalary;
     private double superRate;
 
-
     public Employee(String firstName, String surname, int annualSalary, double superRate) {
         this.firstName = firstName;
         this.surname = surname;
