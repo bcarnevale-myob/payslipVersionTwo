@@ -32,7 +32,7 @@ public class PaySlipGenerator {
         this.pay = new Pay(employee, startDate, endDate);
     }
 
-    public String getPaySlip() {
+    String getPaySlip() {
         return "Name: " + employee.getFullName() + "\n" +
                 "Pay Period: " + pay.payPeriod() + "\n" +
                 "Gross Income: " + pay.grossIncome() + "\n" +
