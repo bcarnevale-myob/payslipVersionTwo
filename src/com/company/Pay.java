@@ -2,21 +2,19 @@ package com.company;
 
 public class Pay {
 
-    private Employee employee;
     private String startDate;
     private String endDate;
     private int annualSalary;
     private double superRate;
 
     public Pay(Employee employee, String startDate, String endDate) {
-        this.employee = employee;
         this.startDate = startDate;
         this.endDate = endDate;
         this.annualSalary = employee.getAnnualSalary();
         this.superRate = employee.getSuperRate();
     }
 
-    private String payPeriod() {
+    public String payPeriod() {
         return startDate + " - " + endDate;
     }
 
@@ -35,15 +33,6 @@ public class Pay {
 
     public int monthlySuper() {
         return (int) Math.round(grossIncome() * superRate);
-    }
-
-    public String generatePaySlip() {
-        return "Name: " + employee.getFullName() + "\n" +
-                "Pay Period: " + payPeriod() + "\n" +
-                "Gross Income: " + grossIncome() + "\n" +
-                "Income Tax: " + incomeTax() + "\n" +
-                "Net Income: " + netIncome() + "\n" +
-                "Super: " + monthlySuper();
     }
 
 }
