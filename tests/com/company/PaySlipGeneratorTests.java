@@ -26,9 +26,6 @@ public class PaySlipGeneratorTests {
                 "Net Income: 4082\n" +
                 "Super: 450";
 
-        Employee employee = new Employee("Bianca", "Carnevale", 60050, 0.09);
-        Pay pay = new Pay(employee, "01 March", "31 March");
-
         PaySlipGenerator paySlip = new PaySlipGenerator(new MockWriter(), new MockReader(userResponses));
 
         String actualPaySlip = paySlip.getPaySlip();
