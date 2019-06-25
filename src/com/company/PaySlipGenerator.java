@@ -32,18 +32,14 @@ public class PaySlipGenerator {
         this.pay = new Pay(employee, startDate, endDate);
     }
 
-    String getPaySlip() {
-        return "Name: " + employee.getFullName() + "\n" +
-                "Pay Period: " + pay.payPeriod() + "\n" +
-                "Gross Income: " + pay.grossIncome() + "\n" +
-                "Income Tax: " + pay.incomeTax() + "\n" +
-                "Net Income: " + pay.netIncome() + "\n" +
-                "Super: " + pay.monthlySuper();
-    }
-
     private void displayPayslip() {
         writer.write("Your payslip has been generated:");
         writer.write(getPaySlip());
+    }
+
+    public String getPaySlip() {
+        PaySlipTemplate paySlip = new PaySlipTemplate(employee, pay);
+        return paySlip.getPaySlipTemplate();
     }
 
 }
